@@ -1,0 +1,280 @@
+/* Container that groups all three boxes */
+.game-section {
+  width: max-content;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;     /* stay in one row */
+  gap: 2rem;
+}
+
+/* Container that groups all three boxes */
+.game-section {
+  width: 60%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* even spacing between boxes */
+}
+
+/* Each individual box */
+.game-box {
+	flex-shrink: 0;
+  background: #ad8484; /* dusty rose */
+  border: 1px solid #b8a999;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; /* space between image and text */
+}
+
+/* Images always on the left */
+.game-box img {
+  flex: 0 0 32%;       /* fixed-ish width */
+  max-width: 230px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* Text area */
+.game-text {
+  flex: 1;             /* takes remaining space */
+  padding-left: 0.5rem;
+}
+
+.game-text h3 {
+  margin: 0 0 0.35rem 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: #26112C;
+  font-size: 1.5rem;
+}
+
+.game-text p {
+  margin: 0;
+  color: #2e241c;
+  line-height: 1.35;
+  font-family: 'Alegreya', serif;
+}
+.game-text ol {
+	font-family: 'Alegreya', serif;
+}
+.game-text ul {
+	font-family: 'Alegreya', serif;
+}
+/* ---------------------------------------
+   GLOBAL PAGE BACKGROUND + TYPOGRAPHY
+---------------------------------------- */
+
+.intro {
+	margin: 1.5rem auto;
+	width: 80%;
+	padding-top:5px;
+}
+body {
+  background-color: #d9c9b8; /* warm parchment */
+  background-image:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: #2e241c; /* rich walnut */
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.back-box {
+  display: block;
+  width: 200px;
+ margin-left: 2rem;
+  padding: 1rem;
+  background: #754B4D;
+  border: 1px solid #b8a999;
+  border-radius: 10px;
+  color: #d9c9b8;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+h1 {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.2rem;
+  background: #7c583d; 
+  color: #f2e9dd;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 1rem 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 3px;
+  background-color: #c58e67; /* light orange */
+  margin: 0.75rem auto 0 auto;
+  border-radius: 2px;
+}
+/* ---------------------------------------
+   GAME PAGE QUOTE CONTAINER
+---------------------------------------- */
+.quote-epic-free {
+  text-align: center;
+  margin: 1.5rem auto 2rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.quote-epic-free h3 {
+  font-size: 3.0rem;
+  color: #26112C; /* your deep forest green */
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.quote-epic-free h4 {
+  font-size: 2.4rem;
+  color: #7c583d; /* your warm walnut accent */
+  margin: 0.3rem 0 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+.quote-flourish {
+  font-size: 1.6rem;
+  color: #3f4a39; /* deep forest */
+  margin-top: 0.4rem;
+  letter-spacing: 3px;
+}
+
+/* Magical corner brackets */
+.quote-forest-epic::before,
+.quote-forest-epic::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #9e4f4f; /* dusty rose accent */
+  opacity: 0.45;
+  border-radius: 4px;
+}
+
+.quote-forest-epic::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.quote-forest-epic::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+.main-text {
+  width: 60%;              /* matches your game-section width */
+  margin: 1.5rem auto 2rem; /* clean spacing above & below */
+  text-align: center;       /* optional but looks elegant */
+  color: #2e241c;           /* matches your site’s text tone */
+  font-size: 1.1rem;
+  width: 400px;
+  margin-left: 40%;
+  padding: 1rem;
+  background: #3f4a39;
+  border: 1px solid #b8a999;
+  border-radius: 10px;
+  color: #d9c9b8;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* The enlarged image */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+/* Forest‑witchy glow */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow:
+    0 0 18px rgba(60, 80, 60, 0.45),   /* soft green glow */
+    0 0 28px rgba(124, 88, 61, 0.35);  /* warm walnut glow */
+  animation: lightboxFade 0.35s ease-out;
+}
+@keyframes lightboxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.lightbox {
+  animation: overlayFade 0.25s ease-out;
+}
+
+@keyframes overlayFade {
+  from { background: rgba(0, 0, 0, 0); }
+  to   { background: rgba(0, 0, 0, 0.8); }
+}
+
+.book-main-text {
+  width: 60%;              /* matches your game-section width */
+  margin: 1.5rem auto 2rem; /* clean spacing above & below */
+  text-align: center;       /* optional but looks elegant */
+  color: #2e241c;           /* matches your site’s text tone */
+  font-size: 1.1rem;
+  width: 400px;
+  margin-left: 40%;
+  padding: 1rem;
+  background: linear-gradient(#9aa88f, #8f9c84);
+  border: 1px solid #b8a999;
+  border-radius: 10px;
+  color: #26112C;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+	

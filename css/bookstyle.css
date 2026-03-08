@@ -1,0 +1,304 @@
+
+/* ---------------------------------------
+   GLOBAL PAGE BACKGROUND + TYPOGRAPHY
+---------------------------------------- */
+
+.intro {
+	margin: 1.5rem auto;
+	width: 80%;
+	padding-top:5px;
+}
+body {
+  background-color: #d9c9b8; /* warm parchment */
+  background-image:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: #2e241c; /* rich walnut */
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.back-box {
+  display: block;
+  width: 200px;
+  margin-left: 2rem;
+  padding: 1rem;
+  background: #754B4D;
+  border: 1px solid #b8a999;
+  border-radius: 10px;
+  color: #d9c9b8;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+h1 {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.2rem;
+  background: #7c583d; 
+  color: #f2e9dd;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 1rem 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 3px;
+  background-color: #c58e67; /* light orange */
+  margin: 0.75rem auto 0 auto;
+  border-radius: 2px;
+}
+/* ---------------------------------------
+   GAME PAGE QUOTE CONTAINER
+---------------------------------------- */
+.quote-epic-free {
+  text-align: center;
+  margin: 1.5rem auto 2rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.quote-epic-free h3 {
+  font-size: 3.0rem;
+  color: #26112C; /* your deep forest green */
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.quote-epic-free h4 {
+  font-size: 2.4rem;
+  color: #7c583d; /* your warm walnut accent */
+  margin: 0.3rem 0 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+
+/* Magical corner brackets */
+.quote-forest-epic::before,
+.quote-forest-epic::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #9e4f4f; /* dusty rose accent */
+  opacity: 0.45;
+  border-radius: 4px;
+}
+
+.quote-forest-epic::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.quote-forest-epic::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* The enlarged image */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+/* Forest‑witchy glow */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow:
+    0 0 18px rgba(60, 80, 60, 0.45),   /* soft green glow */
+    0 0 28px rgba(124, 88, 61, 0.35);  /* warm walnut glow */
+  animation: lightboxFade 0.35s ease-out;
+}
+@keyframes lightboxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.lightbox {
+  animation: overlayFade 0.25s ease-out;
+}
+
+@keyframes overlayFade {
+  from { background: rgba(0, 0, 0, 0); }
+  to   { background: rgba(0, 0, 0, 0.8); }
+}
+
+
+.book-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #9aa88f;
+  background-image: url('parchment-texture.png');
+  background-size: cover;
+  border: 2px solid rgba(60, 50, 40, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+  animation: fadeIn 0.8s ease forwards;
+  margin: 0 10% 2% 10%;
+}
+
+.book-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+.book-cover {
+  width: 140px;
+  height: 210px;       /* pick a consistent height */
+  object-fit: contain; /* keeps full image visible */
+  
+  padding: 6px;        /* optional: adds breathing room */
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #2e2a25;
+}
+
+.book-author {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  margin: 0.2rem 0 1rem;
+  color: #5a5248;
+}
+
+.book-thoughts {
+  font-family: 'Alegreya', serif;
+  line-height: 1.6;
+  color: #3a352f;
+}
+
+.book-tags span {
+  display: inline-block;
+  background: rgba(80, 60, 50, 0.15);
+  padding: 4px 10px;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: 'Alegreya', serif;
+  color: #3a352f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.storybook-intro {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    padding: 1.5rem 2rem;
+    position: relative;
+    font-family: 'Alegreya', serif;
+}
+
+/* Curled illuminated-manuscript corner brackets */
+.storybook-intro::before,
+.storybook-intro::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 3px solid #3f4a39;
+    opacity: 0.45;
+    border-radius: 50% 0 50% 0; /* creates the curled, medieval corner */
+}
+
+/* Top-left curled bracket */
+.storybook-intro::before {
+    top: 4px;      /* pulled tighter */
+    left: 4px;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Bottom-right curled bracket */
+.storybook-intro::after {
+    bottom: 4px;   /* pulled tighter */
+    right: 4px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Drop cap */
+.intro-paragraph::first-letter {
+    font-size: 2.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    float: left;
+    line-height: 1;
+    padding-right: 8px;
+    padding-top: 4px;
+    color: #5a4a3a;
+}
+
+/* List styling */
+.intro-list {
+    list-style-type: "✧ ";
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.intro-list li {
+    margin-bottom: 0.35rem;
+    color: #3a352f;
+}
